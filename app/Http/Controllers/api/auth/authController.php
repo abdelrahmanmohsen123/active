@@ -25,20 +25,51 @@ class authController extends Controller
             return response()->json($validator->errors(),400);
         }
         $data = $request->all();
-        User::create([
+        $user = User::create([
                 'name' => $data['name'],
                 'address' => $data['address'],
                 'password' => Hash::make($data['password']),
                 'phone' => $data['phone'],
-        ]);       
-        $credentials = request(['phone', 'password']);
+        ]); 
+        $token = Auth::login($user);
+        
+        return response()->json([
+            'status' => 'success',
+            'message' => 'User created successfully',
+            'user' => $user,
+            'authorisation' => [
+                'token' => $token,
+                'type' => 'bearer',
+            ]
+        ]);
+    }
 
-        if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+    public function login(Request $request){
+        $request->validate([
+            'phone' => 'required|string|numeric',
+            'password' => 'required|string',
+        ]);
+        $credentials = $request->only('phone', 'password');
+
+        $token = Auth::attempt($credentials);
+        if (!$token) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Unauthorized',
+            ], 401);
         }
-        $user = User::where('phone',$request->phone)->first();
-        $user->token ='bearer' . $token;
-        return response()->json(['success'=>'true','user'=>$user,'token'=>$token],200);
+
+        $user = Auth::user();
+        return response()->json([
+                'status' => 'success',
+                'user' => $user,
+                'authorisation' => [
+                    'token' => $token,
+                    'type' => 'bearer',
+                ]
+            ]);
+
+    
     }
 
 }
