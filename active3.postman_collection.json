@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "68a043cf-e6a9-4554-978a-9602244d5f6a",
+		"name": "active3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21210138"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "abdo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678910",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "skdml",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01063170725",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
