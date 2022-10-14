@@ -36,7 +36,7 @@ Route::group([
 
 });
 Route::group(['prefix'=>'users','middleware' => 'api'],function(){
-    Route::get('cart-list', [CartController::class, 'cartList'])->name('cart');
+    Route::get('show-cart', [CartController::class, 'cartList'])->name('cart');
     Route::post('add-to-cart', [CartController::class, 'addToCart'])->name('add.to.cart');
     Route::post('update-cart', [CartController::class, 'update'])->name('update.cart');
     Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove.from.cart');

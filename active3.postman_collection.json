@@ -140,7 +140,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjU3NTk4NTgsImV4cCI6MTY2NTc2MzQ1OCwibmJmIjoxNjY1NzU5ODU4LCJqdGkiOiJkY2ljRmJyRmlyOVhHTVdVIiwic3ViIjoiMjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.H22xHLt3bMVjqHi4egF_vTUXEzsUiO7zi45M9ws_32c",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvcmVnaXN0ZXIiLCJpYXQiOjE2NjU3NjgyMTAsImV4cCI6MTY2NTc3MTgxMCwibmJmIjoxNjY1NzY4MjEwLCJqdGkiOiJueEJlVXo0UWRzVG5uOW5rIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.zul751o06rGQ3mTQt7y62VXz9pNFesZtYEApVZ-2WDk",
 									"type": "string"
 								}
 							]
@@ -152,12 +152,12 @@
 							"formdata": [
 								{
 									"key": "product_id",
-									"value": "1",
+									"value": "2",
 									"type": "text"
 								},
 								{
 									"key": "quantity",
-									"value": "4",
+									"value": "3",
 									"type": "text"
 								}
 							]
