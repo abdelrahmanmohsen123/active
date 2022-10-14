@@ -97,6 +97,109 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "carts",
+			"item": [
+				{
+					"name": "cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjU3NTk4NTgsImV4cCI6MTY2NTc2MzQ1OCwibmJmIjoxNjY1NzU5ODU4LCJqdGkiOiJkY2ljRmJyRmlyOVhHTVdVIiwic3ViIjoiMjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.H22xHLt3bMVjqHi4egF_vTUXEzsUiO7zi45M9ws_32c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/cart-list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"cart-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToCart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjU3NTk4NTgsImV4cCI6MTY2NTc2MzQ1OCwibmJmIjoxNjY1NzU5ODU4LCJqdGkiOiJkY2ljRmJyRmlyOVhHTVdVIiwic3ViIjoiMjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.H22xHLt3bMVjqHi4egF_vTUXEzsUiO7zi45M9ws_32c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/add-to-cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"add-to-cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/add-to-cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"add-to-cart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

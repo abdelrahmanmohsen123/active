@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\auth\authController;
+use App\Http\Controllers\api\auth\CartController;
+use App\Http\Controllers\api\auth\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,10 @@ Route::group([
 
 
 });
+Route::group(['prefix'=>'users','middleware' => 'api'],function(){
+    Route::get('cart-list', [CartController::class, 'cartList'])->name('cart');
+    Route::post('add-to-cart', [CartController::class, 'addToCart'])->name('add.to.cart');
+    Route::post('update-cart', [CartController::class, 'update'])->name('update.cart');
+    Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove.from.cart');
+});
+
